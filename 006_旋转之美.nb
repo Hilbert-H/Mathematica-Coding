@@ -1,0 +1,313 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12033,        305]
+NotebookOptionsPosition[     11128,        284]
+NotebookOutlinePosition[     11476,        299]
+CellTagsIndexPosition[     11433,        296]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"color", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "Red", ",", "Black", ",", "Gray", ",", "Magenta", ",", "Brown", ",", 
+     "Orange", ",", "Pink", ",", "Purple"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"GraphicsGrid", "[", 
+  RowBox[{
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Graphics", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Thickness", "[", "0.004", "]"}], ",", 
+          RowBox[{"color", "[", 
+           RowBox[{"[", 
+            RowBox[{"RandomInteger", "[", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", 
+               RowBox[{"Length", "@", "color"}]}], "}"}], "]"}], "]"}], "]"}],
+           ",", 
+          RowBox[{"Line", "@", 
+           RowBox[{"AnglePath", "[", 
+            RowBox[{"ConstantArray", "[", 
+             RowBox[{
+              RowBox[{"n", " ", 
+               RowBox[{"Pi", "/", "180"}]}], ",", "100"}], "]"}], "]"}]}]}], 
+         "}"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"n", ",", "120", ",", "180", ",", "2"}], "}"}]}], "]"}], ",", 
+     "8"}], "]"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "1200"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.796263964864998*^9, 3.796263967388356*^9}, {
+   3.796264019089951*^9, 3.796264124200912*^9}, {3.7962641623926487`*^9, 
+   3.7962641641497583`*^9}, {3.796264200292609*^9, 3.7962642372461147`*^9}, {
+   3.796264305431313*^9, 3.796264305686002*^9}, {3.79626441715031*^9, 
+   3.796264419036253*^9}, {3.796264537173029*^9, 3.796264625462446*^9}, {
+   3.796264664182171*^9, 3.796264668086279*^9}, {3.796264771680531*^9, 
+   3.7962648127060623`*^9}, 3.796264910143332*^9, {3.7962649427624807`*^9, 
+   3.7962649432835217`*^9}, {3.7962650093768997`*^9, 3.796265017911008*^9}, {
+   3.796265096465472*^9, 3.79626513036742*^9}, {3.796265173402533*^9, 
+   3.7962652078265533`*^9}, {3.796265253924618*^9, 3.796265308977632*^9}, {
+   3.7962668248890543`*^9, 3.79626688194965*^9}, {3.79626706951978*^9, 
+   3.79626710147829*^9}, {3.796267146465822*^9, 3.796267181283278*^9}, {
+   3.79626721839818*^9, 3.7962673209733553`*^9}, {3.796267681126628*^9, 
+   3.7962676821929502`*^9}},
+ CellLabel->
+  "In[133]:=",ExpressionUUID->"5fa6969d-b5ec-4ed9-90e1-4d16dd3d0d5c"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"rot", "[", 
+    RowBox[{"\[Theta]_", ",", "dr_"}], "]"}], ":=", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thickness", "[", "0.005", "]"}], ",", 
+      RowBox[{"color", "[", 
+       RowBox[{"[", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", 
+           RowBox[{"Length", "@", "color"}]}], "}"}], "]"}], "]"}], "]"}], 
+      ",", 
+      RowBox[{"Line", "@", 
+       RowBox[{"AnglePath", "[", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"r", ",", "\[Theta]"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"r", ",", "0", ",", "1", ",", "dr"}], "}"}]}], "]"}], 
+        "]"}]}]}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"GraphicsGrid", "[", 
+  RowBox[{
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"rot", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Pi", "/", "180"}], " ", "n"}], ",", "0.02"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"n", ",", "60", ",", "120", ",", "3"}], "}"}]}], "]"}], ",", 
+     "7"}], "]"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "1200"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.796265666791642*^9, 3.796266009179657*^9}, {
+  3.796266084921295*^9, 3.7962660926369867`*^9}, {3.796266124852475*^9, 
+  3.796266125359941*^9}, {3.796266712341296*^9, 3.796266812092291*^9}, {
+  3.796267346606329*^9, 3.79626734859284*^9}},
+ CellLabel->
+  "In[120]:=",ExpressionUUID->"0e96a0c3-e92b-4e0c-bd25-93fb2073fdfc"],
+
+Cell[BoxData[{
+ RowBox[{"GraphicsGrid", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Graphics", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Thickness", "[", "0.001", "]"}], ",", "Red", ",", 
+         RowBox[{"Line", "@", 
+          RowBox[{"AnglePath", "@", 
+           RowBox[{"N", "@", 
+            RowBox[{"Range", "[", 
+             RowBox[{"10", "^", "n"}], "]"}]}]}]}]}], "}"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "3", ",", "6"}], "}"}]}], "]"}], "}"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "1200"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Export", "[", 
+    RowBox[{"\"\</Users/apple/Desktop/Rotate1.jpg\>\"", ",", "%", ",", 
+     RowBox[{"ImageResolution", "\[Rule]", "700"}]}], "]"}], 
+   "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.7962662415514097`*^9, 3.7962664680839987`*^9}, {
+  3.7962665324593773`*^9, 3.79626666251097*^9}, {3.796266697671722*^9, 
+  3.796266699892261*^9}, {3.796266962296812*^9, 3.796266966717373*^9}, {
+  3.796267397898096*^9, 3.7962674400055103`*^9}, {3.796268489932522*^9, 
+  3.7962685072419043`*^9}, {3.7962692058185167`*^9, 3.796269229047043*^9}, {
+  3.796269576837386*^9, 3.796269577087393*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"4189edd2-9cca-4303-91bd-56fc117014c0"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"color", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "Red", ",", "Black", ",", "Gray", ",", "Magenta", ",", "Brown", ",", 
+     "Orange", ",", "Purple"}], "}"}]}], ";", 
+  RowBox[{"GraphicsGrid", "[", 
+   RowBox[{
+    RowBox[{"Partition", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Thickness", "[", "0.001", "]"}], ",", 
+           RowBox[{"color", "[", 
+            RowBox[{"[", 
+             RowBox[{"RandomInteger", "[", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", 
+                RowBox[{"Length", "@", "color"}]}], "}"}], "]"}], "]"}], 
+            "]"}], ",", 
+           RowBox[{"Line", "@", 
+            RowBox[{"AnglePath", "@", 
+             RowBox[{"N", "@", 
+              RowBox[{"Range", "[", 
+               RowBox[{"0", ",", 
+                RowBox[{
+                 RowBox[{"10", "^", "4"}], "  ", "d"}], ",", "d"}], 
+               "]"}]}]}]}]}], "}"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"d", ",", "0.1", ",", "3", ",", "0.1"}], "}"}]}], "]"}], ",",
+       "7"}], "]"}], ",", 
+    RowBox[{"ImageSize", "\[Rule]", "1200"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Export", "[", 
+    RowBox[{"\"\</Users/apple/Desktop/Rotate2.jpg\>\"", ",", "%", ",", 
+     RowBox[{"ImageResolution", "\[Rule]", "500"}]}], "]"}], 
+   "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.7962674748871813`*^9, 3.796267506009654*^9}, {
+   3.796267539539048*^9, 3.79626765884829*^9}, {3.796267737428932*^9, 
+   3.796267756054995*^9}, {3.7962677903746977`*^9, 3.796267826001471*^9}, {
+   3.796267916660681*^9, 3.796267940701869*^9}, {3.796267972203684*^9, 
+   3.796268032239319*^9}, {3.796268081953442*^9, 3.796268082364616*^9}, {
+   3.7962681911316833`*^9, 3.796268238670092*^9}, {3.7962683134049053`*^9, 
+   3.796268363795755*^9}, {3.796268603363454*^9, 3.796268606885573*^9}, {
+   3.796269411844573*^9, 3.796269563640183*^9}, 3.797678461214764*^9},
+ CellLabel->"In[9]:=",ExpressionUUID->"3f2844b8-5f48-439f-a210-48d7047c2e6d"],
+
+Cell[BoxData[{
+ RowBox[{"GraphicsGrid", "[", 
+  RowBox[{
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Graphics", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Thickness", "[", "0.001", "]"}], ",", 
+          RowBox[{"color", "[", 
+           RowBox[{"[", 
+            RowBox[{"RandomInteger", "[", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", 
+               RowBox[{"Length", "@", "color"}]}], "}"}], "]"}], "]"}], "]"}],
+           ",", 
+          RowBox[{"Line", "@", 
+           RowBox[{"AnglePath", "@", 
+            RowBox[{"N", "@", 
+             RowBox[{"Range", "[", 
+              RowBox[{"0", ",", 
+               RowBox[{
+                RowBox[{"10", "^", "5"}], "  ", "d"}], ",", "d"}], 
+              "]"}]}]}]}]}], "}"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"d", ",", "0.1", ",", "3", ",", "0.1"}], "}"}]}], "]"}], ",", 
+     "7"}], "]"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "1200"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Export", "[", 
+    RowBox[{"\"\</Users/apple/Desktop/Rotate3.jpg\>\"", ",", "%", ",", 
+     RowBox[{"ImageResolution", "\[Rule]", "500"}]}], "]"}], 
+   "*)"}]}]}], "Input",
+ CellChangeTimes->{
+  3.7962673754544687`*^9, {3.796269698169837*^9, 3.79626970427472*^9}, {
+   3.796270232051004*^9, 3.796270236985362*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"fef08944-e310-4353-9fcf-24d28a9ee686"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Graphics", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Thickness", "[", "0.001", "]"}], ",", "Brown", ",", 
+    RowBox[{"Line", "@", 
+     RowBox[{"AnglePath", "@", 
+      RowBox[{"N", "@", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", 
+         RowBox[{
+          RowBox[{"10", "^", "4"}], "  ", "2.5"}], ",", "2.5"}], 
+        "]"}]}]}]}]}], "}"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\</Users/apple/Desktop/Rotate5.jpg\>\"", ",", "%", ",", 
+   RowBox[{"ImageResolution", "\[Rule]", "1000"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.796268114311307*^9, 3.796268175102491*^9}, {
+  3.796268393834674*^9, 3.796268452044764*^9}, {3.796268548660833*^9, 
+  3.796268597957162*^9}, {3.7962686971277237`*^9, 3.796268751230859*^9}, {
+  3.7962699172005987`*^9, 3.796269976665812*^9}, {3.796270028098699*^9, 
+  3.796270060843978*^9}, {3.79627009312689*^9, 3.796270138348413*^9}, {
+  3.7962701950431547`*^9, 3.79627019608619*^9}, {3.79627050427632*^9, 
+  3.7962705194589376`*^9}},
+ CellLabel->
+  "In[201]:=",ExpressionUUID->"da55def3-2787-4c5d-9b7e-379e60999cb4"],
+
+Cell[BoxData["\<\"/Users/apple/Desktop/Rotate5.jpg\"\>"], "Output",
+ CellChangeTimes->{{3.796268424266274*^9, 3.7962684528155212`*^9}, {
+   3.7962685733533993`*^9, 3.796268598398769*^9}, {3.796268700531087*^9, 
+   3.796268751739616*^9}, {3.796269958612537*^9, 3.796269977948289*^9}, {
+   3.796270038052774*^9, 3.7962700618544273`*^9}, {3.796270098879429*^9, 
+   3.796270106621058*^9}, 3.796270138630163*^9, 3.796270196543228*^9, 
+   3.796270525076956*^9},
+ CellLabel->
+  "Out[202]=",ExpressionUUID->"36fb05d3-04dc-4171-a13c-1a9fc8225364"]
+}, Open  ]]
+},
+WindowSize->{Full, Full},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (2019\:5e744\:67088\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2289, 51, 116, "Input",ExpressionUUID->"5fa6969d-b5ec-4ed9-90e1-4d16dd3d0d5c"],
+Cell[2850, 73, 1612, 44, 80, "Input",ExpressionUUID->"0e96a0c3-e92b-4e0c-bd25-93fb2073fdfc"],
+Cell[4465, 119, 1333, 30, 67, "Input",ExpressionUUID->"4189edd2-9cca-4303-91bd-56fc117014c0"],
+Cell[5801, 151, 2139, 51, 139, "Input",ExpressionUUID->"3f2844b8-5f48-439f-a210-48d7047c2e6d"],
+Cell[7943, 204, 1477, 39, 103, "Input",ExpressionUUID->"fef08944-e310-4353-9fcf-24d28a9ee686"],
+Cell[CellGroupData[{
+Cell[9445, 247, 1126, 24, 80, "Input",ExpressionUUID->"da55def3-2787-4c5d-9b7e-379e60999cb4"],
+Cell[10574, 273, 538, 8, 34, "Output",ExpressionUUID->"36fb05d3-04dc-4171-a13c-1a9fc8225364"]
+}, Open  ]]
+}
+]
+*)
+
